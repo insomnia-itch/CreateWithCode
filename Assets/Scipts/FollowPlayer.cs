@@ -13,8 +13,9 @@ public class FollowPlayer : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    // LateUpdate is called *after* Update, once per frame
+    // Useful so that the camera updates consistently after the vehicle
+    void LateUpdate()
     {
         transform.position = player.transform.position + offset;
     }
